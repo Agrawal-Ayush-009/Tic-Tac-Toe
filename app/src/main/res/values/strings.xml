@@ -7,4 +7,5 @@
     <string name="Edit_text_1">Enter Name 1</string>
     <string name="Button_text">Play</string>
     <string name="bottom_text">will start first!</string>
+    <string name="after_text">VS</string>
 </resources>
