@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 
@@ -12,10 +13,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-
     fun playButton(view: View) {
         val name1 = findViewById<EditText>(R.id.player1Name).editableText.toString()
-        val name2 = findViewById<EditText>(R.id.player2Name).editableText.toString()
+        val name2 = findViewById<EditText>(R.id.player2).editableText.toString()
 
         if(name1.isEmpty() && name2.isEmpty()){
             Toast.makeText(this, "Enter the Names!", Toast.LENGTH_SHORT).show()
