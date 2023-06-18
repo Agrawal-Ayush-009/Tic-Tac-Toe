@@ -1,126 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_pattern"
+    android:focusable="auto"
+    android:focusableInTouchMode="false"
+    android:visibility="visible"
+    app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tic-Tac-Toe"
-        android:textSize="40sp"
-        android:layout_marginTop="150dp"
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="305dp"
+        android:layout_height="315dp"
+        android:layout_marginTop="76dp"
+        android:baselineAligned="false"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:importantForAccessibility="no"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@+id/player1"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/player1"
-        app:layout_constraintTop_toTopOf="@+id/player1"
-        android:src="@drawable/baseline_close_24"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/group_6" />
 
     <ImageView
-        android:id="@+id/player1Icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toLeftOf="@+id/player1Name"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/imageView4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="@+id/player1Name"
+        app:layout_constraintEnd_toStartOf="@+id/player1Name"
+        app:layout_constraintHorizontal_bias="0.883"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/player1Name"
-        android:src="@drawable/baseline_person_24"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="10dp"
-        />
-
-    <TextView
-        android:id="@+id/player1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Player - 1 : "
-        android:textSize="20dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ellipse_1" />
 
     <EditText
         android:id="@+id/player1Name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/player1"
-        app:layout_constraintLeft_toRightOf="@+id/player1Icon"
-        android:layout_marginTop="20dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="20dp"
-        android:hint="Enter the name"
-        />
-
-    <TextView
-        android:id="@+id/player2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Player - 2 : "
-        android:textSize="20dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintTop_toBottomOf="@+id/player1Name"
-        />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@+id/player2"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/player2"
-        app:layout_constraintTop_toTopOf="@+id/player2"
-        android:src="@drawable/outline_circle_24"
-        />
-
-    <ImageView
-        android:id="@+id/player2Icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toLeftOf="@+id/player2Name"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/player2Name"
-        app:layout_constraintTop_toTopOf="@+id/player2Name"
-        android:src="@drawable/baseline_person_24"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="10dp"
-        />
+        android:layout_width="245dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="48dp"
+        android:autofillHints="no"
+        android:backgroundTint="#232323"
+        android:fontFamily="@font/dm_mono_light_italic"
+        android:gravity="center_vertical"
+        android:hint="@string/Edit_text_1"
+        android:inputType="text"
+        android:textColor="#121212"
+        android:textColorHint="#b0b0b0"
+        android:textCursorDrawable="@null"
+        android:textIsSelectable="false"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/player2Name"
-        android:layout_width="0dp"
+        android:id="@+id/player2"
+        android:layout_width="245dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="48dp"
+        android:autofillHints="no"
+        android:backgroundTint="#232323"
+        android:fontFamily="@font/dm_mono_light_italic"
+        android:gravity="center_vertical"
+        android:hint="@string/Edit_text_2"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="#121212"
+        android:textColorHint="#b0b0b0"
+        android:textCursorDrawable="@null"
+        android:textIsSelectable="false"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/player2"
+        app:layout_constraintTop_toBottomOf="@+id/player1Name" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@+id/player2"
+        app:layout_constraintEnd_toStartOf="@+id/player2"
+        app:layout_constraintTop_toTopOf="@+id/player2"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/group_1" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/player2"
-        app:layout_constraintLeft_toRightOf="@+id/player2Icon"
-        android:layout_marginTop="20dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="20dp"
-        android:hint="Enter the name"
-        />
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/text_background"
+        android:backgroundTint="#DDDDDD"
+        android:elevation="4dp"
+        app:barrierMargin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="12dp"
+            android:fontFamily="@font/dm_mono"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="@string/bottom_text"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="15dp"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/ellipse_1" />
+    </FrameLayout>
 
     <Button
         android:id="@+id/playButton"
-        android:onClick="playButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Play"
-        app:layout_constraintTop_toBottomOf="@id/player2Name"
-        android:layout_marginTop="30dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        android:layout_width="145dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#232323"
+        android:elegantTextHeight="false"
+        android:elevation="10dp"
+        android:focusable="auto"
+        android:fontFamily="@font/dm_mono_medium"
+        android:hapticFeedbackEnabled="true"
+        android:text="@string/Button_text"
+        android:textAlignment="gravity"
+        android:textAllCaps="false"
+        android:textColor="#ECECEC"
+        android:textColorLink="#ECECEC"
+        android:textSize="30sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player2"
+        app:layout_constraintVertical_bias="0.423"
+        app:strokeColor="#1B1B1B"
+        app:strokeWidth="5dp" />
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>

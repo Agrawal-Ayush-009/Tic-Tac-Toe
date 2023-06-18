@@ -2,13 +2,9 @@
 <resources>
     <!-- android_large___1 strings -->
 
-    <string name="app_name">Page 1</string>
-    <string name="ek_img_content">ExportKit Image</string>
-    <string name="player_1_ek1_string">Player 1</string>
-    <string name="player_2_ek1_string">Player 2</string>
-    <string name="play_string">Play</string>
-    <string name="tic_string">TIC</string>
-    <string name="tac_string">TAC</string>
-    <string name="toe_string">TOE</string>
-    <string name="note__will_start_first__string">Note:   will start first!</string>
+    <string name="app_name">Tic-Tac-Toe</string>
+    <string name="Edit_text_2">Enter Name 2</string>
+    <string name="Edit_text_1">Enter Name 1</string>
+    <string name="Button_text">Play</string>
+    <string name="bottom_text">will start first!</string>
 </resources>

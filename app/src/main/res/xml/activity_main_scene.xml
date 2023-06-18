@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="500"
+        motion:motionInterpolator="cubic(0.4,0,0.6,1)">
+        <OnClick
+            motion:clickAction="toggle"
+            motion:targetId="@+id/playButton" />
+    </Transition>
+    <ConstraintSet android:id="@+id/start" >
+        <Constraint
+            android:id="@+id/playButton"
+            android:elevation="10dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="145dp"
+            android:layout_height="60dp"
+            motion:layout_constraintBottom_toTopOf="@+id/frameLayout"
+            motion:layout_constraintVertical_bias="0.423"
+            motion:layout_constraintTop_toBottomOf="@+id/player2"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:transitionEasing="linear" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/end" >
+        <Constraint
+            android:id="@+id/playButton"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="645dp"
+            android:layout_height="2662dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_editor_absoluteY="-111dp" />
+        <Constraint
+            android:id="@+id/frameLayout"
+            android:elevation="4dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="64dp"
+            motion:layout_constraintTop_toBottomOf="@+id/button"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="25dp"
+            android:visibility="invisible" />
+    </ConstraintSet>
+
+
+</MotionScene>
