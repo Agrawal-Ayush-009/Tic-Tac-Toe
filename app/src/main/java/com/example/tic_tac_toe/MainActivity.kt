@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun playButton(view: View) {
         val name1 = findViewById<EditText>(R.id.player1Name).editableText.toString()
-        val name2 = findViewById<EditText>(R.id.player2).editableText.toString()
+        val name2 = findViewById<EditText>(R.id.player2Name).editableText.toString()
 
         if(name1.isEmpty() && name2.isEmpty()){
             Toast.makeText(this, "Enter the Names!", Toast.LENGTH_SHORT).show()

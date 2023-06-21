@@ -6,6 +6,9 @@
     <string name="Edit_text_2">Enter Name 2</string>
     <string name="Edit_text_1">Enter Name 1</string>
     <string name="Button_text">Play</string>
-    <string name="bottom_text">will start first!</string>
+    <string name="bottom_text">Will Start First!</string>
     <string name="after_text">VS</string>
+    <string name="title_activity_game">GameActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

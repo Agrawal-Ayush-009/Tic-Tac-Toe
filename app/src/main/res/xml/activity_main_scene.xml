@@ -35,6 +35,17 @@
             motion:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="64dp"
             motion:layout_constraintTop_toBottomOf="@+id/button" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="245dp"
+            android:layout_height="50dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintTop_toBottomOf="@+id/player1Name"
+            android:id="@+id/player2Name"
+            motion:layout_constraintStart_toEndOf="@+id/Xlogo"
+            android:layout_marginStart="62dp"
+            android:layout_marginLeft="62dp" />
     </ConstraintSet>
     <ConstraintSet android:id="@+id/end" >
         <Constraint

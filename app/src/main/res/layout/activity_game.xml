@@ -4,32 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/ColorPrimary"
+    android:background="@drawable/dark_bg"
     tools:context=".GameActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
         android:id="@+id/p1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/dm_mono"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/dm_mono_light_italic"
+        android:gravity="center_horizontal"
+        android:rotation="180"
         android:text="Player"
-        android:textColor="@color/splash_bg"
+        android:textColor="@color/white"
         android:textSize="30sp"
+        app:layout_constraintHorizontal_bias="0.573"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cross_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
 
     <TextView
         android:id="@+id/p2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:fontFamily="@font/dm_mono"
-        android:text="Player"
-        android:textColor="@color/splash_bg"
+        android:layout_marginBottom="52dp"
+        android:fontFamily="@font/dm_mono_light_italic"
+        android:gravity="center_horizontal"
+        android:hint="Player"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.573"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
@@ -53,9 +78,11 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginRight="5dp"
-                android:background="#FFFFFF"
+                android:background="#7593FF"
                 android:onClick="clickfun"
-                android:textColor="#000000"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:hint="X"
                 android:textSize="60dp" />
 
             <Button
@@ -64,9 +91,11 @@
                 android:layout_height="100dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:background="#FFFFFF"
+                android:background="#F77C7C"
+                android:hint="O"
                 android:onClick="clickfun"
-                android:textColor="#000000"
+                android:textColor="#edf2f4"
+                android:textColorHint="#edf2f4"
                 android:textSize="60dp" />
 
             <Button
@@ -74,7 +103,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="5dp"
-                android:background="#FFFFFF"
+                android:background="#7593FF"
                 android:onClick="clickfun"
                 android:textColor="#000000"
                 android:textSize="60dp" />
@@ -92,10 +121,13 @@
                 android:layout_height="100dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
-                android:background="#FFFFFF"
+                android:background="#F77C7C"
                 android:onClick="clickfun"
-                android:textColor="#000000"
-                android:textSize="60dp" />
+                android:textColor="#edf2f4"
+                android:textColorHint="#edf2f4"
+                android:hint="O"
+                android:textSize="60dp"
+                />
 
             <Button
                 android:id="@+id/five"
@@ -104,9 +136,11 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
-                android:background="#FFFFFF"
+                android:background="#7593FF"
+                android:hint="X"
                 android:onClick="clickfun"
-                android:textColor="#000000"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 android:textSize="60dp" />
 
             <Button
@@ -115,9 +149,11 @@
                 android:layout_height="100dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                android:background="#FFFFFF"
+                android:background="#F77C7C"
                 android:onClick="clickfun"
-                android:textColor="#000000"
+                android:textColor="#edf2f4"
+                android:textColorHint="#edf2f4"
+                android:hint="O"
                 android:textSize="60dp" />
 
         </TableRow>
@@ -134,7 +170,7 @@
                 android:layout_height="100dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
-                android:background="#FFFFFF"
+                android:background="#7593FF"
                 android:onClick="clickfun"
                 android:textColor="#000000"
                 android:textSize="60dp" />
@@ -146,9 +182,11 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
-                android:background="#FFFFFF"
+                android:background="#F77C7C"
                 android:onClick="clickfun"
-                android:textColor="#000000"
+                android:textColor="#edf2f4"
+                android:textColorHint="#edf2f4"
+                android:hint="O"
                 android:textSize="60dp" />
 
             <Button
@@ -157,13 +195,17 @@
                 android:layout_height="100dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                android:background="#FFFFFF"
+                android:background="#7593FF"
                 android:onClick="clickfun"
-                android:textColor="#000000"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:hint="X"
                 android:textSize="60dp" />
 
         </TableRow>
     </LinearLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
