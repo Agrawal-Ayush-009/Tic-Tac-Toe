@@ -79,10 +79,9 @@
                 android:layout_height="100dp"
                 android:layout_marginRight="5dp"
                 android:background="#7593FF"
-                android:onClick="clickfun"
+                android:onClick="onTap"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
-                android:hint="X"
                 android:textSize="60dp" />
 
             <Button
@@ -92,8 +91,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:background="#F77C7C"
-                android:hint="O"
-                android:onClick="clickfun"
+                android:onClick="onTap"
                 android:textColor="#edf2f4"
                 android:textColorHint="#edf2f4"
                 android:textSize="60dp" />
@@ -104,7 +102,7 @@
                 android:layout_height="100dp"
                 android:layout_marginLeft="5dp"
                 android:background="#7593FF"
-                android:onClick="clickfun"
+                android:onClick="onTap"
                 android:textColor="#000000"
                 android:textSize="60dp" />
         </TableRow>
@@ -122,10 +120,9 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
                 android:background="#F77C7C"
-                android:onClick="clickfun"
+                android:onClick="onTap"
                 android:textColor="#edf2f4"
                 android:textColorHint="#edf2f4"
-                android:hint="O"
                 android:textSize="60dp"
                 />
 
@@ -137,8 +134,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
                 android:background="#7593FF"
-                android:hint="X"
-                android:onClick="clickfun"
+                android:onClick="onTap"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:textSize="60dp" />
@@ -150,10 +146,9 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:background="#F77C7C"
-                android:onClick="clickfun"
+                android:onClick="onTap"
                 android:textColor="#edf2f4"
                 android:textColorHint="#edf2f4"
-                android:hint="O"
                 android:textSize="60dp" />
 
         </TableRow>
@@ -171,7 +166,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
                 android:background="#7593FF"
-                android:onClick="clickfun"
+                android:onClick="onTap"
                 android:textColor="#000000"
                 android:textSize="60dp" />
 
@@ -183,10 +178,9 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
                 android:background="#F77C7C"
-                android:onClick="clickfun"
+                android:onClick="onTap"
                 android:textColor="#edf2f4"
                 android:textColorHint="#edf2f4"
-                android:hint="O"
                 android:textSize="60dp" />
 
             <Button
@@ -196,10 +190,9 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:background="#7593FF"
-                android:onClick="clickfun"
+                android:onClick="onTap"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
-                android:hint="X"
                 android:textSize="60dp" />
 
         </TableRow>

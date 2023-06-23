@@ -27,32 +27,24 @@ class GameActivity : AppCompatActivity() {
     var array = arrayOf<Char>('0', '0', '0', '0', '0', '0', '0', '0', '0')
     var emptyArr = arrayOf<Int>(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
-    fun clickfun(view: View) {
-        val button = view as Button
-        var id = 0
-        when(button.id){
-            R.id.one -> id = 1
-            R.id.two -> id = 2
-            R.id.three -> id = 3
-            R.id.four -> id = 4
-            R.id.five -> id = 5
-            R.id.six -> id = 6
-            R.id.seven -> id = 7
-            R.id.eight -> id = 8
-            R.id.nine -> id = 9
-        }
-        play(button,id)
-    }
 
-    fun changeTurn(){
+    private fun changeTurn(){
         if(activePlayer == 'O'){
             activePlayer = 'X'
+            val player2 = findViewById<TextView>(R.id.p2).text.toString()
+            Toast.makeText(this,"$player2's Turn", Toast.LENGTH_SHORT).show()
         }else{
             activePlayer = 'O'
+            val player1 = findViewById<TextView>(R.id.p1).text.toString()
+            Toast.makeText(this, "$player1's Turn", Toast.LENGTH_SHORT).show()
         }
     }
 
-    fun checkWinner(){
+    private fun checkWinner(){
+        if(emptyArr.isEmpty()){
+            Toast.makeText(this,"It's a Tie", Toast.LENGTH_SHORT).show()
+            return
+        }
 
         var winLine = ""
         for(i in 0..7){
@@ -91,17 +83,57 @@ class GameActivity : AppCompatActivity() {
             }
         }
 
-//        if(winLine == "XXX"){
-//            return 'X'
-//        }else if(winLine == "OOO"){
-//            return 'O'
-//        }
+        if(winLine == "XXX"){
+            Toast.makeText(this,"X Won", Toast.LENGTH_SHORT).show()
+        }else if(winLine == "OOO"){
+            Toast.makeText(this,"X Won", Toast.LENGTH_SHORT).show()
+        }
 
     }
 
+    private fun removeByIndex(array: Array<Int>, index: Int): Array<Int> {
+        val result = arrayOf<Int>(array.lastIndex)
+        System.arraycopy(array, 0, result, 0, index)
+        if (array.size != index) {
+            System.arraycopy(array, index + 1, result, index, array.lastIndex - index)
+        }
+        return result
+    }
 
-    fun play(button: Button, id: Int){
 
+    private fun play(button: Button, ID: Int){
+        if(activePlayer == 'O'){
+            button.setText("O").toString()
+            array[ID - 1] = 'O'
+            emptyArr = removeByIndex(emptyArray(),ID - 1)
+        }else{
+            button.setText("X").toString()
+            array[ID - 1] = 'X'
+            emptyArr = removeByIndex(emptyArray(), ID - 1)
+        }
+
+
+        checkWinner();
+
+        changeTurn();
+    }
+
+    fun onTap(view: View) {
+        val button = view as Button
+        var ID = 0
+        when(button.id){
+            R.id.one -> ID = 1
+            R.id.two -> ID = 2
+            R.id.three -> ID = 3
+            R.id.four -> ID = 4
+            R.id.five -> ID = 5
+            R.id.six -> ID = 6
+            R.id.seven -> ID = 7
+            R.id.eight -> ID = 8
+            R.id.nine -> ID = 9
+        }
+
+        play(button,ID)
     }
 
 
