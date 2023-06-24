@@ -3,9 +3,12 @@ package com.example.tic_tac_toe
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
@@ -31,7 +34,18 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intent)
         }
+
+
+        var text=findViewById<TextView>(R.id.playButton)
+
+        val animationFadeIn = AnimationUtils.loadAnimation(this, R.anim.tictactoe_anim)
+        val textView = findViewById<TextView>(R.id.playButton)
+        text.startAnimation(animationFadeIn)
+        Handler().postDelayed({
+            textView.visibility = View.VISIBLE
+        }, 1000)
+        }
     }
+    
 
 
-}
