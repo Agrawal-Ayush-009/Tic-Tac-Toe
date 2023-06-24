@@ -10,11 +10,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#ECECEC"
-        />
+        tools:layout_editor_absoluteX="-52dp"
+        tools:layout_editor_absoluteY="-53dp" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/ic_launcher"
+        android:src="@drawable/icon_foreground"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:left="10dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
