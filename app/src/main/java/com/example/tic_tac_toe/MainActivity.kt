@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
     }
     fun playButton(view: View) {
         val name1 = findViewById<EditText>(R.id.player1Name).editableText.toString()

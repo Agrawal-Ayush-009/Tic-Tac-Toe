@@ -8,12 +8,14 @@
     tools:context=".GameActivity">
 
     <ImageView
+        android:id="@+id/O_Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/circle_name"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
         />
 
     <TextView
@@ -32,7 +34,24 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <TextView
+        android:id="@+id/turnO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/O_Back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/LinearLayout"
+        android:fontFamily="@font/dm_mono_light_italic"
+        android:textSize="20sp"
+        android:rotation="180"
+        android:textColor="#edf2f4"
+        android:textColorHint="#edf2f4"
+        />
+
     <ImageView
+        android:id="@+id/X_Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/cross_name"
@@ -59,6 +78,7 @@
         app:layout_constraintRight_toRightOf="parent" />
 
     <LinearLayout
+        android:id="@+id/LinearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -77,17 +97,19 @@
                 android:id="@+id/one"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:tag ="1"
                 android:layout_marginRight="5dp"
                 android:background="#7593FF"
                 android:onClick="onTap"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
+                android:textColor="#edf2f4"
+                android:textColorHint="#edf2f4"
                 android:textSize="60dp" />
 
             <Button
                 android:id="@+id/two"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:tag ="2"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:background="#F77C7C"
@@ -100,10 +122,11 @@
                 android:id="@+id/three"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:tag ="3"
                 android:layout_marginLeft="5dp"
                 android:background="#7593FF"
                 android:onClick="onTap"
-                android:textColor="#000000"
+                android:textColor="#edf2f4"
                 android:textSize="60dp" />
         </TableRow>
 
@@ -117,6 +140,7 @@
                 android:id="@+id/four"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:tag ="4"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
                 android:background="#F77C7C"
@@ -130,13 +154,14 @@
                 android:id="@+id/five"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:tag ="5"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
                 android:background="#7593FF"
                 android:onClick="onTap"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
+                android:textColor="#edf2f4"
+                android:textColorHint="#edf2f4"
                 android:textSize="60dp" />
 
             <Button
@@ -145,6 +170,7 @@
                 android:layout_height="100dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
+                android:tag ="6"
                 android:background="#F77C7C"
                 android:onClick="onTap"
                 android:textColor="#edf2f4"
@@ -165,9 +191,10 @@
                 android:layout_height="100dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
+                android:tag ="7"
                 android:background="#7593FF"
                 android:onClick="onTap"
-                android:textColor="#000000"
+                android:textColor="#edf2f4"
                 android:textSize="60dp" />
 
             <Button
@@ -177,6 +204,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
+                android:tag ="8"
                 android:background="#F77C7C"
                 android:onClick="onTap"
                 android:textColor="#edf2f4"
@@ -188,15 +216,30 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="5dp"
+                android:tag ="9"
                 android:layout_marginTop="5dp"
                 android:background="#7593FF"
                 android:onClick="onTap"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
+                android:textColor="#edf2f4"
+                android:textColorHint="#edf2f4"
                 android:textSize="60dp" />
 
         </TableRow>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/turnX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/X_Back"
+        android:fontFamily="@font/dm_mono_light_italic"
+        android:textSize="20sp"
+        android:textColor="#edf2f4"
+        android:textColorHint="#edf2f4"
+        />
 
 
 
