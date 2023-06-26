@@ -57,6 +57,7 @@ class GameActivity : AppCompatActivity() {
     private fun checkWinner(){
 
          lateinit var player : String
+         var flag = false
 
         for(i in 0..7) {
             var winLine = ""
@@ -128,6 +129,8 @@ class GameActivity : AppCompatActivity() {
                     popup.dismiss()
                     resetFun()
                 }
+
+                flag = true
                 break
             } else if (winLine.compareTo("XXX") == 0) {
                 player = findViewById<TextView>(R.id.p2).text.toString()
@@ -147,27 +150,31 @@ class GameActivity : AppCompatActivity() {
                     popup.dismiss()
                     resetFun()
                 }
+
+                flag = true
                 break
             }
 
         }
 
-        if(emptyArr.size == 9){
-            val popup = Dialog(this)
-            popup.requestWindowFeature(Window.FEATURE_NO_TITLE)
-            popup.setCancelable(false)
-            popup.setContentView(R.layout.tie_popup)
-            popup.window?.setBackgroundDrawable(ColorDrawable(Color.WHITE))
+        if(!flag){
+            if(emptyArr.size == 9){
+                val popup = Dialog(this)
+                popup.requestWindowFeature(Window.FEATURE_NO_TITLE)
+                popup.setCancelable(false)
+                popup.setContentView(R.layout.tie_popup)
+                popup.window?.setBackgroundDrawable(ColorDrawable(Color.WHITE))
 
 
-            val message = popup.findViewById<TextView>(R.id.message)
-            val reset = popup.findViewById<Button>(R.id.reset_Button)
-            message.setText("It's a TIE").toString()
-            popup.show()
+                val message = popup.findViewById<TextView>(R.id.message)
+                val reset = popup.findViewById<Button>(R.id.reset_Button)
+                message.setText("It's a TIE").toString()
+                popup.show()
 
-            reset.setOnClickListener {
-                popup.dismiss()
-                resetFun()
+                reset.setOnClickListener {
+                    popup.dismiss()
+                    resetFun()
+                }
             }
         }
     }
